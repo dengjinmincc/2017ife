@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IFE JavaScript Task 01</title>
+	</head>
+	<body>
+		<label>请输入你想说的话: <input type="text" id="wannaTalk" /></label>
+		<button id="button" onclick="showVal();">确认填写</button>
+		<div>你想说的话是: <span id="saying"></span></div>
+		
+		<script>
+			function showVal(){
+				//获取输入框中的值
+				var talking = document.getElementById("wannaTalk").value;
+				//将获取的值显示出来
+				document.getElementById("saying").innerHTML = talking;
+			}
+		</script>
+	</body>
+</html>
