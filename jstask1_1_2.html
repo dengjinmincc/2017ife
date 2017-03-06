@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IFE JavaScript Task 02</title>
+	</head>
+	<body>
+		<h3>污染城市列表</h3>
+		<ul id="data">
+			
+		</ul>
+		
+		<script>
+			var Data = [
+				["北京", 90],
+				["上海", 50],
+				["福州", 10],
+				["广州", 50],
+				["成都", 90],
+				["西安", 100]
+			];
+			arr = ["一", "二", "三", "四", "五", "六"];
+			var order = Data.sort(function(x, y){
+				return x[1] < y[1];
+			});
+			for(var i = 0; i < order.length; i++){
+				var ulNode = document.getElementById("data");
+				var newLi = document.createElement("li");
+				ulNode.appendChild(newLi);
+				newLi.innerHTML = "第" + arr[i] + "名: " + Data[i];
+			}
+		</script>
+	</body>
+</html>
