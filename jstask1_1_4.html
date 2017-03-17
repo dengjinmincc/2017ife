@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IFE JavaScript Task 04</title>
+		<style type="text/css">
+			ul{
+				list-style: none;
+			}
+			ul li{
+				display:inline-block;
+				background-color:red;
+				color:yellow;
+				width:30px;
+				height:30px;
+				padding:17px 17px;
+				margin-left:7px;
+				margin-right:7px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="num" />
+		<button type="button" id="leftIn">左侧入</button>
+		<button type="button" id="rightIn">右侧入</button>
+		<button type="button" id="leftOut">左侧出</button>
+		<button type="button" id="rightOut">右侧出</button>
+		<ul id="result">
+			
+		</ul>
+		
+		
+		<script>
+			//获取文本框中的数字, 判断输入内容的合法性
+			function checkNum(num){
+				var num = document.getElementById("num").value;
+				var reg = /^\d+$/;
+				if(num == ""){
+					alert("输入不能为空!");
+					return false;
+				}else if(!(reg.test(num))){
+					alert("请输入整数!");
+					return false;
+				}
+				return true;
+			}
+		
+			function removeLi(event){
+				var target = event.target;
+				var result = document.getElementById("result");
+				result.removeChild(target);
+			}
+			//点击id为leftIn的button，将input输入的数字添加到队列左侧
+			function leftInFuc(){
+				var num = document.getElementById("num").value;
+				if(checkNum(num)){
+					var result = document.getElementById("result");
+					var li = document.createElement("li");
+					li.innerHTML = num;
+					var queueNodes = result.childNodes;
+					result.insertBefore(li, queueNodes[0]);
+				}
+				li.onclick = function(event){
+					removeLi(event);
+				}
+			}
+			
+			function rightInFuc(){
+				var num = document.getElementById("num").value;
+				var result = document.getElementById("result");
+				if(checkNum(num)){
+					var li = document.createElement("li");
+					li.innerHTML = num;
+					result.appendChild(li);
+				}
+				li.onclick = function(event){
+					removeLi(event);
+				}
+			}
+			
+			function leftOutFuc(){
+				var result = document.getElementById("result");
+				if(!result.hasChildNodes()){
+					alert("队列现在为空!");
+					return;
+				}
+				result.removeChild(result.firstElementChild);
+			}
+			
+			function rightOutFuc(){
+				var result = document.getElementById("result");
+				if(!result.hasChildNodes()){
+					alert("队列现在为空!");
+					return;
+				}
+				result.removeChild(result.lastElementChild);
+			}
+			
+			//给button绑定点击事件,点击时触发handleBtn
+			function init(){
+				var leftIn = document.getElementById("leftIn");
+				leftIn.addEventListener("click", leftInFuc, false);
+				var rightIn = document.getElementById("rightIn");
+				rightIn.addEventListener("click", rightInFuc, false);
+				var leftOut = document.getElementById("leftOut");
+				leftOut.addEventListener("click", leftOutFuc, false);
+				var rightOut = document.getElementById("rightOut");
+				rightOut.addEventListener("click", rightOutFuc, false);
+			}
+			init();
+		</script>
+	</body>
+</html>
