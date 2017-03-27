@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		名称: <input type="text" id="name"/> <button type="button"id="btn">验证</button>
+		<div id="name_msg"></div>
+		
+		<script>
+			function getLength(str){
+				return 	str.replace(/[^/x00-xff]/g, 'xx').length;
+			}
+			
+			document.getElementById('btn').onclick = function(){
+				var 
+					name = document.getElementById('name').value,
+					msg = document.getElementById('name_msg'),
+				 	length = getLength(name);
+				if(name == ''){
+					msg.innerHTML = "姓名不能为空";
+					return false;
+				}
+				else if(length < 4 || length > 16){
+					msg.innerHTML = "必填，长度为4-16个字符";
+					return false;
+				}
+				else{
+					msg.innerHTML = "";
+					return true;
+				}
+			}
+		</script>
+	</body>
+</html>
