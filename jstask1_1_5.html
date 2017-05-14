@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IFE JavaScript Task05</title>
+		<style type="text/css">
+			ul{
+				list-style: none;
+			}
+			ul li{
+				float: left;
+				background: red;
+				margin-right: 7px;
+				width: 27px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="input" />
+		<button type="button" id="leftIn">左侧入</button>
+		<button type="button" id="rightIn">右侧入</button>
+		<button type="button" id="leftOut">左侧出</button>
+		<button type="button" id="rightOut">右侧出</button>
+		<button type="button" id="sort">排序</button>
+		<ul id="result">
+			
+		</ul>
+		
+		<script>
+			var index = 0, 
+				result = document.getElementById("result");
+			function queueIn(obj){
+				var input = document.getElementById("input");
+				var num = input.value;
+				if((num == "") || (num < 10) || (num > 100) || (isNaN(num))){
+					alert("请输入10-100的数字!");
+					return false;
+				}
+				if(index >= 60){
+					alert("输入的元素已超过60个!");
+					return false;
+				}
+				var li = document.createElement("li");
+				if(obj.id == "leftIn"){
+					result.insertBefore(li, result.childNodes[0]);
+				}else{
+					result.appendChild(li);
+				}
+				li.style.height = num + "px";
+				index++;
+			}
+			var left_in = document.getElementById("leftIn"), 
+				right_in = document.getElementById("rightIn"), 
+				left_out = document.getElementById("leftOut"), 
+				right_out = document.getElementById("rightOut");
+			left_in.onclick = function(){
+				queueIn(this);
+			}
+			right_in.onclick = function(){
+				queueIn(this);
+			}
+			left_out.onclick = function(){
+				if(!result.hasChildNodes()){
+					alert("无法进行此操作!");
+				}
+				result.removeChild(result.firstElementChild);
+			}
+			right_out.onclick = function(){
+				if(!result.hasChildNodes()){
+					alert("无法进行此操作!");
+				}
+				result.removeChild(result.lastElementChild);
+			}
+			var sort = document.getElementById("sort");
+			sort.onclick = function(){
+				let arr = new Array(),
+					list = document.getElementsByTagName("li"),
+					len = list.length;
+				
+				for(let i = 0; i < len; i++){
+					arr.push(list[i].style.height.substring(0, 2));
+				}
+				arr = arr.sort(function(x, y){
+					return x > y;
+				})
+				result.innerHTML = "";
+				for(let i = 0; i < len; i++){
+					let li = document.createElement("li");
+					li.style.height = arr[i] + "px";
+					result.appendChild(li);
+				}
+			}
+		</script>
+	</body>
+</html>
