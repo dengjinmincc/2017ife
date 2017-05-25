@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IFE Yaoyao Task03</title>
+        <style type="text/css">
+            body{
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-size: 18px;
+                color: #333;
+            }
+            #table{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            div{
+                margin-bottom: 17px;
+            }
+            #table div:first-child label{
+                margin-right: 12px;
+            }
+            input[type=text]{
+                border-radius: 5px;
+                width: 237px;
+                height: 27px;
+            }
+            select{
+                width: 107px;
+                height: 30px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="table">
+            <div>
+                <input type="radio" name="status" value="0" id="student" checked><label for="student">在校生</label>
+                <input type="radio" name="status" value="1" id="officer"><label for="officer">非在校生</label>
+            </div>
+            <div id="school">
+                <label for="city">学校</label>
+                <select name="city" id="city">
+                    <option>北京</option>
+                    <option>成都</option>              
+                </select>
+                <select name="university" id="university">
+                    <option value="0">北京大学</option>
+                    <option value="1">清华大学</option>
+                    <option value="2">北京理工大学</option>
+                </select>
+            </div>
+            <div id="work" style="display:none">
+                <label for="unit">就业单位</label>
+                <input type="text" id="unit">
+            </div>
+        </div>
+        <div id="data"></div>
+
+        <script>
+           var checkout = {
+               student: document.getElementById("student"),
+               officer: document.getElementById("officer"),
+               school: document.getElementById("school"),
+               work: document.getElementById("work"),
+               city: document.getElementById("city"),
+               university: document.getElementById("university"),
+               changerStatus: function(){
+                   if(student.checked){
+                        work.style.display = "none";
+                        school.style.display = "block";
+                   }else{
+                        work.style.display = "block";
+                        school.style.display = "none";
+                   }
+               },
+               changeSchool: function(a){
+                    university.options.length = 0;
+                    switch(a){
+                        case "北京":
+                            university.add(new Option("北京大学"));
+                            university.add(new Option("清华大学"));
+                            university.add(new Option("北京理工大学"));
+                            break;
+                        case "成都":
+                            university.add(new Option("电子科技大学"));
+                            university.add(new Option("成都信息工程大学"));
+                            university.add(new Option("成都理工大学"));
+                            break;
+                    }   
+               }
+           }
+           checkout.student.onchange = checkout.changerStatus;
+           checkout.officer.onchange = checkout.changerStatus;
+           checkout.city.onchange = function(){
+               checkout.changeSchool(checkout.city.value);
+           }
+           
+        </script>
+    </body>
+</html>

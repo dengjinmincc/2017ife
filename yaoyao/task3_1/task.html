@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#main{
+				position: absolute;
+				top: 40%;
+				left: 40%;
+			}
+			select{
+				width: 137px;
+				height: 37px;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<label for="city">城市</label> 
+			<select name="city" id="city">
+				<option value="beijing">北京</option>
+				<option value="chengdu">成都</option>
+				<option value="chongqing">重庆</option>
+				<option value="shanghai">上海</option>
+			</select>
+			<label for="school">学校</label>
+			<select name="school" id="school">
+				<option value="">清华大学</option>
+				<option value="">北京大学</option>
+				<option value="">北京理工大学</option>
+			</select>
+		</div>
+		
+		<script>
+			'use strict'
+			
+			var school = document.getElementById('school'), city = document.getElementById("city");
+			
+			/*function success(text){
+				let txt = JSON.parse(text);
+				//console.log(txt.chengdu);
+				let display = JSON.stringify(txt, ['chengdu']);
+				console.log(JSON.parse(display));
+			}*/
+			
+			function fail(status){
+				alert("请求错误: " + status);
+			}
+			
+			city.onchange = function(){
+				school.innerHTML = "";
+				var xhr, c = this.value;
+				//console.log(c);
+				if(window.XMLHttpRequest){
+					xhr = new XMLHttpRequest();
+				}else if(window.ActiveXObject){
+					xhr = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4){
+					if(xhr.status == 200){
+						//console.log(xhr.responseText);
+						let txt = JSON.parse(xhr.responseText);
+						//console.log(typeof c);
+						let display = JSON.parse(JSON.stringify(txt, [c])), data = display[c];
+						//console.log(JSON.parse(display));
+						//console.log(display[c] instanceof Array);
+						for(let i = 0; i < data.length; i++){
+							let options = document.createElement("option");
+							options.innerHTML = data[i];
+							school.appendChild(options);
+						}
+					}else{
+						return fail(xhr.status);
+					}
+				}else{
+					//响应还在继续...
+				}
+			}
+			
+			xhr.open("GET", "data.json", true);
+			xhr.send(this.value);
+			}
+		</script>
+	</body>
+</html>
