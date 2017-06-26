@@ -1,0 +1,182 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.navigation{
+	width: 1170px;
+	height: 55px;
+	margin: 0 auto;
+	overflow: hidden;
+	clear: both;
+}
+.navigation h3{
+	margin: 0;
+	float: left;
+}
+.navigation h3 i{
+	display: inline-block;
+	background: url(../img/sprit.png) 0 -46px no-repeat;
+	width: 31px;
+	height: 31px;
+	margin: 12px 10px -7px 0;
+}
+.nav-bar{
+	list-style: none;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+.nav-bar li{
+	float: left;
+	width: 65px;
+	height: 50px;
+	margin-right: 25px;
+	text-align: center;
+	cursor: pointer;
+}
+.nav-bar li a{
+	text-decoration: none;
+	font: normal 15px/55px "微软雅黑";
+    color: rgb(158, 159, 163);
+}
+.nav-bar li a:hover{
+	border-bottom: #E74F4D;
+}
+.nav-bar li i{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url(../img/sprit.png) -33px -54px no-repeat;
+	margin: 2px 2px 0 0;
+}
+.nav-bar li:last-child{
+	color: #E74F4D;
+}
+.bg_main{
+	width: 100%;
+	height: 645px;
+	background: url(../img/newLife.jpg) 30px 0 no-repeat;
+}
+.newLife{
+	position: absolute;
+	top: 200px;
+	left: 120px;
+	color: #FFFFFF;
+}
+.newLife h1{
+	margin-bottom: 20px;
+	font-family: "microsoft yahei";
+	font-size: 52px;
+}
+.newLife p{
+	margin-bottom: 7px;
+}
+.newLife a{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	width: 330px;
+	height: 63px;
+	background-color: #E8504F;
+	margin-top: 100px;
+	font: normal 30px/65px "microsoft yahei";
+	text-align: center;
+}
+.bg_foot{
+	width: 80%;
+	height: 250px;
+	margin: 0 auto;
+}
+.bg_foot ul{
+	list-style: none;
+}
+.bg_foot ul li{
+	float: left;
+	width: 15%;
+	color: #8D8D8D;
+	font-size: 14px;
+	text-align: center;
+}
+.bg_foot li:first-child, .bg_foot li:nth-child(2), .bg_foot li:nth-child(3){
+	margin-right: 12%;
+}
+.bg_foot li:first-child i{
+	display: block;
+	width: 41px;
+	height: 41px;
+	margin: 50px auto;
+	background: url(../img/sprit.png) 0 0 no-repeat;
+}
+.bg_foot li:nth-child(2) i{
+	display: block;
+	width: 42px;
+	height: 42px;
+	margin: 50px auto;
+	background: url(../img/sprit.png) -42px 0 no-repeat;
+}
+.bg_foot li:nth-child(3) i{
+	display: block;
+	width: 42px;
+	height: 42px;
+	margin: 50px auto;
+	background: url(../img/sprit.png) -86px 0 no-repeat;
+}
+.bg_foot li:last-child i{
+	display: block;
+	width: 42px;
+	height: 42px;
+	margin: 50px auto;
+	background: url(../img/sprit.png) -126px 0 no-repeat;
+}
+.newWorld{
+	width: 100%;
+	height: 280px;
+	background-color: #EDECEC;
+	color: #A1A1A1;
+	font: normal 50px/30px "microsoft yahei";
+	text-align: center;
+}
+.newWorld i{
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url(../img/sprit.png) 0 -80px no-repeat;
+	margin: 70px auto;
+	position: relative;
+	top: 30px;
+}
+.city{
+	width: 100%;
+	height: 320px;
+	background: url(../img/city.jpg) 0 0 no-repeat;
+	background-size: 100%;
+	position: absolute;
+}
+.choice{
+	width: 80%;
+	margin: 15% auto;
+}
+.choice select{
+	width: 20%;
+	height: 35px;
+	color: rgb(158, 159, 163);
+	margin-left: 28px;
+	appearance: none; /*消除默认样式*/
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url(../img/sprit.png) no-repeat scroll -140px -150px;
+	background-color: #fff;
+	
+}
+.choice a{
+	text-decoration: none;
+	width: 235px;
+	height: 34px;
+	display: inline-block;
+	background-color: #BF4E48;
+	color: #fff;
+	text-align: center;
+	font: normal 18px/30px "microsoft yahei";
+	margin-left: 28px;
+}
