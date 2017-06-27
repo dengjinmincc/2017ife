@@ -3,6 +3,9 @@
 	padding: 0;
 	border: 0;
 }
+a{
+	text-decoration: none;
+}
 .navigation{
 	width: 1170px;
 	height: 55px;
@@ -152,6 +155,7 @@
 	background: url(../img/city.jpg) 0 0 no-repeat;
 	background-size: 100%;
 	position: absolute;
+	background-color: rgba(191, 78, 72, 0.3);
 }
 .choice{
 	width: 80%;
@@ -177,6 +181,100 @@
 	background-color: #BF4E48;
 	color: #fff;
 	text-align: center;
-	font: normal 18px/30px "microsoft yahei";
+	font: normal 16px/30px "microsoft yahei";
 	margin-left: 28px;
+}
+.activity{
+	width: 100%;
+	height: 603px;
+	background-color: #F7F7F7;
+	margin-top: 320px;
+	position: absolute;
+	text-align: center;
+}
+.activity ul{
+	width: 90%;
+	height: 90%;
+	margin: 8%;
+	list-style: none;
+}
+.activity li{
+	float: left;
+	margin-right: 80px;
+}
+.activity li:last-child{
+	margin-right: 0;
+}
+.activity_1 i{
+	display: block;
+	width: 220px;
+	height: 326px;
+	border: 1px solid #DADADA;
+	background: url(../img/activity.png) 0 -970px no-repeat;
+}
+.activity h3{
+	color: #343434;
+	font: normal 16px/28px "microsoft yahei";
+}
+.activity p{
+	color: #A5A5A5;
+	font: normal 14px/26px "microsoft yahei";
+}
+.activity_2 i{
+	display: block;
+	width: 220px;
+	height: 326px;
+	border: 1px solid #DADADA;
+	background: url(../img/activity.png) 0 -647px no-repeat;
+}
+.activity_3 i{
+	display: block;
+	width: 220px;
+	height: 326px;
+	border: 1px solid #DADADA;
+	background: url(../img/activity.png) 0 -320px no-repeat;
+}
+.activity_4 i{
+	display: block;
+	width: 220px;
+	height: 326px;
+	border: 1px solid #DADADA;
+	background: url(../img/activity.png) 0 0 no-repeat;
+}
+.activity li:nth-child(2) h3{
+	letter-spacing: 27px;
+}
+.newTime{
+	width: 100%;
+	height: 564px;
+	position: relative;
+	top: 924px;
+}
+.newTime div{
+	float: right;
+	width: 300px;
+	margin: 100px 85px;
+}
+.newTime div h3{
+	text-align: center;
+	font: normal 20px/30px "microsoft yahei";
+	letter-spacing: 5px;
+}
+.newTime div h3 span{
+	color: #E74F4E;
+}
+.newTime div p{
+	margin:40px auto;
+	color: #B0B0B0;
+	font: normal 14px/30px "microsoft yahei";
+}
+.newTime div a{
+	display: block;
+	width: 105px;
+	height: 32px;
+	border: 1px solid #E74F4E;
+	color: #E74F4E;
+	font: normal 16px/32px "microsoft yahei";
+	text-align: center;
+	margin: 0 auto;
 }
