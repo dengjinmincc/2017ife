@@ -278,3 +278,62 @@ a{
 	text-align: center;
 	margin: 0 auto;
 }
+.newUs{
+	width: 100%;
+	position: relative;
+	top: 926px;
+	text-align: center;
+}
+.newUs a{
+	display: block;
+	width: 170px;
+	height: 45px;
+	margin-top: -170px;
+	margin-left: 120px;
+	line-height: 45px;
+}
+.newUs p{
+	margin: 220px 120px;
+	font: normal 22px/40px "microsoft yahei";
+}
+.newUs i{
+	display: block;
+	height: 2px;
+	width: 30px;
+	position: absolute;
+}
+.newUs_1{
+	display: inline-block;
+	background-color: #E8504F;
+	width: 31%;
+	height: 611px;
+	float: left;
+	color: #fff;
+}
+.newUs_1 a{
+	color: #fff;
+	border: 1px solid #fff;
+}
+.newUs_1 i{
+	top: 320px;
+	left: 190px;
+	background-color: #fff;
+}
+.newUs_2{
+	display: inline-block;
+	width: 31%;
+	height: 611px;
+}
+.newUs_2 a{
+	color: #E8504F;
+	border: 1px solid #E8504F;
+}
+.newUs_2 i{
+	top: 320px;
+	left: 620px;
+	background-color: #ACACAC;
+}
+.newUs_3{
+	display: inline-block;
+	float: right;
+}
