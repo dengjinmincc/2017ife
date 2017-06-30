@@ -337,3 +337,82 @@ a{
 	display: inline-block;
 	float: right;
 }
+.joinUs{
+	position: relative;
+	top: 925px;
+	width: 80%;
+	margin: 0 auto;
+}
+.joinUs_top{
+	margin: 120px auto 100px;
+	text-align: center;
+}
+.joinUs_top h3{
+	font: normal 22px/50px "microsoft yahei";
+}
+.joinUs_top i{
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	background-color: #E84F51;
+	text-align: center;
+	position: relative;
+	top: -20px;
+}
+.joinUs_top p{
+	color: #ACACAC;
+	font: normal 12px/20px "microsoft yahei";
+	margin-top: -10px;
+}
+.joinUs_left{
+	float: left;
+	width: 33%;
+}
+.joinUs_left h4{
+	font: normal 14px/30px "microsoft yahei";
+}
+.joinUs_left p{
+	color: #ACACAC;
+	font: normal 12px/20px "microsoft yahei";
+	margin: 15px 0 0;
+}
+.joinUs_left i{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/sprit.png) -125px -160px no-repeat;
+	margin-left: 295px;
+}
+.joinUs_left span{
+	color: #959394;
+	font: normal 12px/20px "microsoft yahei";
+	display: inline-block;
+	margin-left: 5px;
+	position: relative;
+	top: -5px;
+}
+.joinUs_right{
+	float: right;
+}
+.joinUs_right input, .joinUs_right textarea{
+	background-color: #EDEDEF;
+}
+.joinUs_right input{
+	width: 310px;
+	height: 40px;
+}
+.joinUs_right button{
+	width: 100%;
+	height: 40px;
+}
+.contactUs{
+	width: 100%;
+	background-color: #33363F;
+	color: #fff;
+	position: relative;
+	top: 1400px;
+}
+.contactUs_top{
+	width: 80%;
+	margin: 0 auto;
+}
