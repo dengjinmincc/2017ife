@@ -1,0 +1,60 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+header{
+	width: 100%;
+	height: 55px;
+	background-color: #228ABF;
+	color: #fff;
+	font-size: 10px;
+}
+header img{
+	float: left;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+header ul{
+	float: right;
+	margin-top: 10px;
+	margin-right: 80px;
+}
+header li{
+	float: left;
+	margin-left: 30px;
+}
+header input{
+	width: 315px;
+	height: 20px;
+	border-radius: 56px;
+	border: none;
+	padding-left: 10px;
+}
+header i.search{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/search.gif) top left no-repeat;
+	position: relative;
+	top: 8px;
+	left: 30px;
+}
+header i.login{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/logo-r.gif) top right no-repeat;
+	margin-top: 8px;
+}
+header span{
+	position: relative;
+	top: -7px;
+}
+aside{
+	width: 230px;
+	height: 500px;
+	background-color: #2B2E3D;
+}
