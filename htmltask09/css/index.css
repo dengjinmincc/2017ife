@@ -174,3 +174,146 @@ aside a{
 .date, .number{
 	margin-left: 50px;
 }
+.price{
+	color: #000;
+	text-align: center;
+	margin-left: 4px;
+}
+.price li{
+	float: left;
+	background-color: #fff;
+	box-shadow: -1px -1px 1px #CCCDD1;
+	margin-right: 11px;
+	height: 60px;
+	width: 90px;
+}
+.price p{
+	font-size: 18px;
+	margin: 0;
+	color: #EB6600;
+}
+.price p span{
+	color: #AEAEAE;
+}
+ul.price li:first-child, .price li:nth-child(8){
+	width: 30px;
+}
+.price li:nth-child(2){
+	border-top: 2px solid #4388C9;
+}
+.price i{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: url(../img/history.gif) center left no-repeat;
+	position: relative;
+	top: 12px;
+	left: 4px;
+}
+.lt, .gt{
+	font: normal 30px/60px "microsoft yahei";
+	color: #AFAFAF;
+}
+.statistics{
+	position: relative;
+	width: 90%;
+	top: 70px;
+	margin: 0 auto;
+}
+.statistics p{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+	top: -60px;
+	left: -140px;
+	color: #000;
+}
+.statistics li{
+	float: left;
+	border: 1px solid #D3D4D8;
+	position: relative;
+	top: -70px;
+	left: -40px;
+	width: 20%;
+	height: 60px;
+	margin-right: 4%;
+	background-color: #fff;
+}
+.statistics li:first-child{
+	border-left: 2px solid #43B29F;
+}
+.statistics li:first-child div{
+	width: 60px;
+	height: 40px;
+	background-color: #43B29F;
+	position: absolute;
+	top: 10px;
+	left: 70px;
+}
+.statistics li:nth-child(2){
+	border-left: 2px solid #398AC1;
+}
+.statistics li:nth-child(2) div{
+	width: 60px;
+	height: 40px;
+	background-color: #398AC1;
+	position: absolute;
+	top: 10px;
+	left: 70px;
+}
+.statistics li:nth-child(3){
+	border-left: 2px solid #CF4B36;
+}
+.statistics li:nth-child(3) div{
+	width: 60px;
+	height: 40px;
+	background-color: #CF4B36;
+	position: absolute;
+	top: 10px;
+	left: 70px;
+}
+.statistics li:nth-child(4){
+	border-left: 2px solid #E1CD46;
+}
+.statistics li:nth-child(4) div{
+	width: 60px;
+	height: 40px;
+	background-color: #E1CD46;
+	position: absolute;
+	top: 10px;
+	left: 70px;
+}
+.statistics li span:first-child{
+	color: #000;
+	position: absolute;
+	top: 2px;
+	left: 5px;
+}
+.statistics li span:nth-child(2){
+	position: absolute;
+	top: 25px;
+	left: 5px;
+	font-size: 8px;
+}
+.project{
+	border: 1px solid red;
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	top: 80px;
+}
+.pro_l{
+	width: 60%;
+	border-radius: 10px;
+	border: 1px solid #D1D2D6;
+	height: 200px;
+}
+.pro_l p{
+	background-color: #F4F5F7;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 30px;
+	border: 1px solid #D1D2D6;
+}
